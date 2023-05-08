@@ -731,6 +731,7 @@ export const getAggregatedData = async () => {
     console.error('配置文件中找不到USERS数组')
     throw new Error('配置文件中找不到USERS数组')
   }
+  noteEn = 'Three grand essentials to happiness in this life are something to do,something to love and something to hope for.---Joseph Addison'
   const noteEn1 = ['', '',]
     if (!noteEn && noteEn.length <= 100) {
         noteEn1[0] = noteEn;
