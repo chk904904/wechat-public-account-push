@@ -731,19 +731,6 @@ export const getAggregatedData = async () => {
     console.error('配置文件中找不到USERS数组')
     throw new Error('配置文件中找不到USERS数组')
   }
-  let noteEn1 = ['', '', '', '',]
-  console.log('earthyLoveWords', earthyLoveWords)
-   if (!earthyLoveWords) {
-       noteEn1[0] = earthyLoveWords;
-       console.log('earthyLoveWords1', noteEn1[0])
-//        console.log(noteEn1[0])
-//        noteEn1[1] = earthyLoveWords.substring(20, 40);
-//        console.log(noteEn1[1])
-//        noteEn1[2] = earthyLoveWords.substring(40, 60);
-//        console.log(noteEn1[2])
-//        noteEn1[3] = earthyLoveWords.substring(60);
-//        console.log(noteEn1[3])
-   }
   const users = config.USERS
   for (const user of users) {
     // 获取每日天气
@@ -809,9 +796,9 @@ export const getAggregatedData = async () => {
       { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
       { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
       { name: toLowerLine('noteEn1'), value: earthyLoveWords.substring(0, 20), color: getColor() },
-//       { name: toLowerLine('noteEn2'), value: noteEn1[1], color: getColor() },
-//       { name: toLowerLine('noteEn3'), value: noteEn1[2], color: getColor() },
-//       { name: toLowerLine('noteEn4'), value: noteEn1[3], color: getColor() },
+      { name: toLowerLine('noteEn2'), value: earthyLoveWords.substring(20, 40), color: getColor() },
+      { name: toLowerLine('noteEn3'), value: earthyLoveWords.substring(40, 60), color: getColor() },
+      { name: toLowerLine('noteEn4'), value: earthyLoveWords.substring(60), color: getColor() },
       { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
       { name: toLowerLine('holidaytts'), value: holidaytts, color: getColor() },
       { name: toLowerLine('oneTalk'), value: oneTalk, color: getColor() },
