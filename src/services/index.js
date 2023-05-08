@@ -808,7 +808,7 @@ export const getAggregatedData = async () => {
       { name: toLowerLine('city'), value: user.city || config.CITY, color: getColor() },
       { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
       { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
-      { name: toLowerLine('noteEn1'), value: earthyLoveWords, color: getColor() },
+      { name: toLowerLine('noteEn1'), value: earthyLoveWords.substring(0, 20), color: getColor() },
 //       { name: toLowerLine('noteEn2'), value: noteEn1[1], color: getColor() },
 //       { name: toLowerLine('noteEn3'), value: noteEn1[2], color: getColor() },
 //       { name: toLowerLine('noteEn4'), value: noteEn1[3], color: getColor() },
