@@ -731,12 +731,12 @@ export const getAggregatedData = async () => {
     console.error('配置文件中找不到USERS数组')
     throw new Error('配置文件中找不到USERS数组')
   }
-  let noteEn1 = ['', '','', '',]
+  let noteEn1 = ['', '', '', '',]
    if (!earthyLoveWords) {
        noteEn1[0] = earthyLoveWords.substring(0, 20);
-//        noteEn1[1] = earthyLoveWords.substring(20, 40);
-//        noteEn1[2] = earthyLoveWords.substring(40, 60);
-//        noteEn1[3] = earthyLoveWords.substring(60);
+       noteEn1[1] = earthyLoveWords.substring(20, 40);
+       noteEn1[2] = earthyLoveWords.substring(40, 60);
+       noteEn1[3] = earthyLoveWords.substring(60);
    }
   const users = config.USERS
   for (const user of users) {
