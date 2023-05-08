@@ -731,6 +731,13 @@ export const getAggregatedData = async () => {
     console.error('配置文件中找不到USERS数组')
     throw new Error('配置文件中找不到USERS数组')
   }
+  const noteEn1 = ['', '',]
+    if (!noteEn && noteEn.length <= 100) {
+        noteEn1[0] = noteEn;
+    } else {
+        noteEn1[0] = noteEn.substring(0, 100);
+        noteEn1[1] = noteEn.substring(100);
+    }
   const users = config.USERS
   for (const user of users) {
     // 获取每日天气
@@ -795,6 +802,8 @@ export const getAggregatedData = async () => {
       { name: toLowerLine('city'), value: user.city || config.CITY, color: getColor() },
       { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
       { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
+      { name: toLowerLine('noteEn1'), value: noteEn1[0], color: getColor() },
+      { name: toLowerLine('noteEn2'), value: noteEn1[1], color: getColor() },
       { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
       { name: toLowerLine('holidaytts'), value: holidaytts, color: getColor() },
       { name: toLowerLine('oneTalk'), value: oneTalk, color: getColor() },
