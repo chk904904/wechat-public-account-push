@@ -731,13 +731,13 @@ export const getAggregatedData = async () => {
     console.error('配置文件中找不到USERS数组')
     throw new Error('配置文件中找不到USERS数组')
   }
-  noteEn = 'Three grand essentials to happiness in this life are something to do,something to love and something to hope for.---Joseph Addison'
-  const noteEn1 = ['', '',]
-    if (!noteEn && noteEn.length <= 100) {
-        noteEn1[0] = noteEn;
+  let noteEn2 = 'Three grand essentials to happiness in this life are something to do,something to love and something to hope for.---Joseph Addison'
+  let noteEn1 = ['', '',]
+    if (!noteEn2 && noteEn2.length <= 100) {
+        noteEn1[0] = noteEn2;
     } else {
-        noteEn1[0] = noteEn.substring(0, 100);
-        noteEn1[1] = noteEn.substring(100);
+        noteEn1[0] = noteEn2.substring(0, 100);
+        noteEn1[1] = noteEn2.substring(100);
     }
   const users = config.USERS
   for (const user of users) {
